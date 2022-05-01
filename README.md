@@ -14,6 +14,9 @@ original             |  relief filter
 </sup></sup></p>
 
 ### Supported actions:
+
+<div align="center">
+  
 ***geometric operations***       |  ***1-pixel operations***       | ***convolution matrices***
 :-------------------------:|:-------------------------:|:-------------------------:
 vertical mirroring         |greyshades-average         |ridgedetection 1 (3x3)
@@ -29,9 +32,10 @@ turn 180 degree            |greyshades-natural         |laplace (3x3)
 -|-|median-filter (yxy)
 -|-|pixelation-filter (yxy)
 -|-|main function
+</div>
 
 ### GUI
-<p align="LEFT"> 
+<p align="left"> 
   <img src="https://user-images.githubusercontent.com/84229101/166149424-f4cd1b82-9de7-4ed1-a2c6-e94c58275c3c.PNG" width="58%"/>
 </p>
 
