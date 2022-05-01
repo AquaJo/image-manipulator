@@ -14,7 +14,7 @@ original             |  relief filter
 </sup></sup></p>
 
 ## Supported actions:
-geometric operations       |  1-pixel operations       | convolution matrices
+***geometric operations***       |  ***1-pixel operations***       | ***convolution matrices***
 :-------------------------:|:-------------------------:|:-------------------------:
 vertical mirroring         |greyshades-average         |ridgedetection 1 (3x3)
 horizontal mirroring       |greyshades-max             |ridgedetection 2 (3x3)
