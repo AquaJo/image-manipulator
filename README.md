@@ -1,4 +1,4 @@
-# image-manipulator
+## image-manipulator
 Project was created with blueJ (IDE). Open the project in BlueJ for a better structure (instructions below). \
 Its an image-manipulator GUI, working with JavaFX and was developed for a school project. You can use different filter-matrices and functions on images and gifs. If you want, you can directly import them through URLs. \
 There is also the ability to include a ftp-server for a public  galery. For that, go into config.java and add your ftp-information. Also turn  boolean ftpServerON to true. \
