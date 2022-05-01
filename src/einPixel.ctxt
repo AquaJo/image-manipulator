@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=einPixel
+comment1.params=originalbild\ mode\ vertauschR\ vertauschG\ vertauschB\ prozentR\ prozentG\ prozentB\ prozenteVorNach\ pixelauslassrate\ zulassrate\ pAColorRGBs
+comment1.target=imp.Picture\ farboperationen(imp.Picture,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ float,\ float,\ float,\ java.lang.String,\ int,\ int,\ int[])
+comment10.params=originalbild\ prozentR\ prozentG\ prozentB\ nachOderVorPixelFarbinitialisierung
+comment10.target=imp.Picture\ Prozente(imp.Picture,\ float,\ float,\ float,\ java.lang.String)
+comment2.params=pic
+comment2.target=java.awt.image.BufferedImage\ convertPicture(imp.Picture)
+comment3.params=originalbild
+comment3.target=imp.Picture\ oeffneBild(imp.Picture)
+comment4.params=originalbild
+comment4.target=imp.Picture\ graustufenDurchschnitt(imp.Picture)
+comment5.params=originalbild
+comment5.target=imp.Picture\ graustufenMax(imp.Picture)
+comment6.params=originalbild
+comment6.target=imp.Picture\ graustufenMin(imp.Picture)
+comment7.params=originalbild
+comment7.target=imp.Picture\ graustufenNatuerlich(imp.Picture)
+comment8.params=originalbild
+comment8.target=imp.Picture\ invertieren(imp.Picture)
+comment9.params=originalbild\ vertauschR\ vertauschG\ vertauschB
+comment9.target=imp.Picture\ vertauschen(imp.Picture,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+numComments=11

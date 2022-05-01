@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import imp.PictureViewer?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="main" prefHeight="530.0" prefWidth="750.0" spacing="5.0" style="-fx-background-color: #68a0b0;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+  <children>
+    <MenuBar style="-fx-background-color: #3f888f;" VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="Datei">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#mOpen" text="Öffnen..." />
+                  <MenuItem mnemonicParsing="false" onAction="#mOpenURLName" text="Über URL/ Namen öffnen" />
+            <MenuItem mnemonicParsing="false" onAction="#mSaveAs" text="Speichern als..." />
+                  <MenuItem mnemonicParsing="false" onAction="#mSave" text="Speichern in ./images/saves" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#mUndo" text="Zurück" />
+            <MenuItem mnemonicParsing="false" onAction="#mDelete" text="Löschen" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#mQuit" text="Verlassen" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#mCloseConsole" text="Schließe Konsole" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="geom.-Operationen">
+          <items>
+                  <MenuItem mnemonicParsing="false" onAction="#mMirrorHorizontal" text="Spiegeln Horizontal" />
+                  <MenuItem mnemonicParsing="false" onAction="#mMirrorVertikal" text="Spiegeln Vertikal" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#mTurn90" text="Drehen 90 Grad" />
+                  <MenuItem mnemonicParsing="false" onAction="#mTurn180" text="Drehen 180 Grad" />
+          </items>
+        </Menu>
+            <Menu mnemonicParsing="false" text="1Pixel-Operationen">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#mMainFunction1Pix" text="Main-Funktion" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#mGrayscaleAverage" text="Graustufen Durchschnitt" />
+                  <MenuItem mnemonicParsing="false" onAction="#mGrayscaleMax" text="Graustufen Max" />
+                  <MenuItem mnemonicParsing="false" onAction="#mGrayscaleMin" text="Graustufen Min" />
+                  <MenuItem mnemonicParsing="false" onAction="#mGrayscaleNatural" text="Graustufen Natuerlich" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#mInvert" text="invertieren" />
+                  <MenuItem mnemonicParsing="false" onAction="#mChangeRGB" text="RGB vertauschen" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#mPercents" text="prozente" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#mLeaveVert" text="Pixel auslassen" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Filter-Operationen">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#mMainFuntionMatrixes" text="Main-Funktion" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#mRidgeDetection1" text="Kantenfilter 1 (3x3)" />
+                  <MenuItem mnemonicParsing="false" onAction="#mRidgeDetection2" text="Kantenfilter 2 (3x3)" />
+                  <MenuItem mnemonicParsing="false" onAction="#mHarteKanten" text="harte Kanten (3x3)" />
+                  <MenuItem mnemonicParsing="false" onAction="#mLaplace" text="Laplace (3x3)" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#mSharpeningMatrix" text="Schärfefilter (3x3)" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#mBoxBlur" text="Weichzeichner (3x3) // Teiler 9" />
+                  <MenuItem mnemonicParsing="false" onAction="#mGaussianBlur1" text="Gaußsche Unschärfe 1 (3x3) // Teiler 16" />
+                  <MenuItem mnemonicParsing="false" onAction="#mGaussianBlur2" text="Gaußsche Unschärfe 2 (5x5) // Teiler 256" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#mUnsharpMasking" text="unscharfe Maskierung (5x5) // Teiler -256" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#mReliefMatrix" text="Relieffilter (3x3)" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#mMedianMatrix" text="Medianfilter (yxy)" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#mPixelationMatrix" text="Pixelisierungsfilter (yxy)" />
+               </items>
+            </Menu>
+            <Menu fx:id="galery" mnemonicParsing="false" onAction="#mGalerie" text="Galerie">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#mSavePG" text="Auf öffentlicher Galerie speichern" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#mOpenGalery" text="Öffne öffentliche Galerie" />
+               </items></Menu>
+            <Menu fx:id="galery1" mnemonicParsing="false" onAction="#mGalerie" text="Sprachen">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#mLanguageChange" text="Englisch (Neustart benötigt)" />
+               </items>
+            </Menu>
+      </menus>
+    </MenuBar>
+      <HBox fx:id="consoleID" alignment="CENTER_LEFT" maxHeight="60.0" minHeight="60.0" prefHeight="100.0" prefWidth="630.0" spacing="10.0" style="-fx-background-color: #3f888f;">
+         <children>
+            <VBox prefHeight="64.0" prefWidth="573.0" HBox.hgrow="NEVER">
+               <children>
+                  <Text fx:id="tConsole" fill="#dee7ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Test">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="console" onInputMethodTextChanged="#consoleTextChanged" />
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <Button maxHeight="25.0" maxWidth="50.0" minHeight="0.0" mnemonicParsing="false" onAction="#bConsole" prefHeight="20.0" prefWidth="50.0" text="go" />
+         </children>
+         <VBox.margin>
+            <Insets left="5.0" right="5.0" />
+         </VBox.margin>
+      </HBox>
+      <VBox VBox.vgrow="ALWAYS">
+         <children>
+            <HBox fx:id="hauptbereich" style="-fx-background-color: #68a0b0;">
+               <children>
+                  <PictureViewer fx:id="viewer" fitToHeight="true" fitToWidth="true" style="-fx-background-color: #68a0b0;" HBox.hgrow="SOMETIMES" />
+               </children>
+               <padding>
+                  <Insets bottom="3.0" left="5.0" right="5.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox fx:id="bottomNodes" spacing="8.0">
+         <children>
+            <HBox alignment="CENTER_RIGHT" prefHeight="25.0">
+               <children>
+                  <Button fx:id="playGif" mnemonicParsing="false" onAction="#bPlayGif" style="-fx-background-color: #5f8a8b;" text="Spiele Gif" visible="false">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#bBack" style="-fx-background-color: #5f8a8b;" text="Zurück" />
+               </children>
+               <VBox.margin>
+                  <Insets right="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="2.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="BOTTOM_CENTER" spacing="5.0" style="-fx-background-color: #3f888f;">
+               <children>
+                  <Label minWidth="-Infinity" text="Image-Manipulator by AquaJo" HBox.hgrow="NEVER">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <Pane HBox.hgrow="ALWAYS" />
+                  <Label fx:id="lDateiname" minWidth="-Infinity" text="Bildname" HBox.hgrow="NEVER" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" />
+         </children>
+      </VBox>
+  </children>
+</VBox>

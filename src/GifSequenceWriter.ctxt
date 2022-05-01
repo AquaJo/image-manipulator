@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=GifSequenceWriter
+comment1.params=out\ imageType\ delay\ loop
+comment1.target=GifSequenceWriter(javax.imageio.stream.ImageOutputStream,\ int,\ int,\ boolean)
+comment2.params=delay\ loop
+comment2.target=void\ configureRootMetadata(int,\ boolean)
+comment3.params=rootNode\ nodeName
+comment3.target=javax.imageio.metadata.IIOMetadataNode\ getNode(javax.imageio.metadata.IIOMetadataNode,\ java.lang.String)
+comment4.params=img
+comment4.target=void\ writeToSequence(java.awt.image.RenderedImage)
+comment5.params=
+comment5.target=void\ close()
+numComments=6

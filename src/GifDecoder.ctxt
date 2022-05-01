@@ -1,0 +1,36 @@
+#BlueJ class context
+comment0.target=GifDecoder
+comment0.text=\r\n\ <p>\r\n\ A\ decoder\ capable\ of\ processing\ a\ GIF\ data\ stream\ to\ render\ the\ graphics\r\n\ contained\ in\ it.\ This\ implementation\ follows\ the\ official\r\n\ <A\ HREF\="http\://www.w3.org/Graphics/GIF/spec-gif89a.txt">GIF\r\n\ specification</A>.\r\n\ </p>\r\n\r\n\ <p>\r\n\ Example\ usage\:\r\n\ </p>\r\n\r\n\ <p>\r\n\r\n\ <pre>\r\n\ final\ GifImage\ gifImage\ \=\ GifDecoder.read(int[]\ data);\r\n\ final\ int\ width\ \=\ gifImage.getWidth();\r\n\ final\ int\ height\ \=\ gifImage.getHeight();\r\n\ final\ int\ frameCount\ \=\ gifImage.getFrameCount();\r\n\ for\ (int\ i\ \=\ 0;\ i\ <\ frameCount;\ i++)\ {\r\n\ \tfinal\ BufferedImage\ image\ \=\ gifImage.getFrame(i);\r\n\ \tfinal\ int\ delay\ \=\ gif.getDelay(i);\r\n\ }\r\n\ </pre>\r\n\r\n\ </p>\r\n\r\n\ @author\ Dhyan\ Blum\r\n\ @version\ 1.09\ November\ 2017\r\n\r\n
+comment1.params=in
+comment1.target=GifDecoder.GifImage\ read(byte[])
+comment1.text=\r\n\ @param\ in\r\n\ \ \ \ \ \ \ \ \ \ \ \ Raw\ image\ data\ as\ a\ byte[]\ array\r\n\ @return\ A\ GifImage\ object\ exposing\ the\ properties\ of\ the\ GIF\ image.\r\n\ @throws\ IOException\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ If\ the\ image\ violates\ the\ GIF\ specification\ or\ is\ truncated.\r\n
+comment10.params=img\ in\ i
+comment10.target=int\ readLogicalScreenDescriptor(GifDecoder.GifImage,\ byte[],\ int)
+comment10.text=\r\n\ @param\ img\r\n\ @param\ i\r\n\ \ \ \ \ \ \ \ \ \ \ \ Start\ index\ of\ this\ block.\r\n\ @return\ Index\ of\ the\ first\ byte\ after\ this\ block.\r\n
+comment11.params=in\ pos
+comment11.target=int\ readTextExtension(byte[],\ int)
+comment11.text=\r\n\ @param\ in\r\n\ \ \ \ \ \ \ \ \ \ \ \ Raw\ data\r\n\ @param\ pos\r\n\ \ \ \ \ \ \ \ \ \ \ \ Index\ of\ the\ extension\ introducer\r\n\ @return\ Index\ of\ the\ first\ byte\ after\ this\ block\r\n
+comment2.params=is
+comment2.target=GifDecoder.GifImage\ read(java.io.InputStream)
+comment2.text=\r\n\ @param\ is\r\n\ \ \ \ \ \ \ \ \ \ \ \ Image\ data\ as\ input\ stream.\ This\ method\ will\ read\ from\ the\r\n\ \ \ \ \ \ \ \ \ \ \ \ input\ stream's\ current\ position.\ It\ will\ not\ reset\ the\r\n\ \ \ \ \ \ \ \ \ \ \ \ position\ before\ reading\ and\ won't\ reset\ or\ close\ the\ stream\r\n\ \ \ \ \ \ \ \ \ \ \ \ afterwards.\ Call\ these\ methods\ before\ and\ after\ calling\ this\r\n\ \ \ \ \ \ \ \ \ \ \ \ method\ as\ needed.\r\n\ @return\ A\ GifImage\ object\ exposing\ the\ properties\ of\ the\ GIF\ image.\r\n\ @throws\ IOException\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ If\ an\ I/O\ error\ occurs,\ the\ image\ violates\ the\ GIF\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ specification\ or\ the\ GIF\ is\ truncated.\r\n
+comment3.params=img\ in\ i
+comment3.target=int\ readAppExt(GifDecoder.GifImage,\ byte[],\ int)
+comment3.text=\r\n\ @param\ ext\r\n\ \ \ \ \ \ \ \ \ \ \ \ Empty\ application\ extension\ object\r\n\ @param\ in\r\n\ \ \ \ \ \ \ \ \ \ \ \ Raw\ data\r\n\ @param\ i\r\n\ \ \ \ \ \ \ \ \ \ \ \ Index\ of\ the\ first\ byte\ of\ the\ application\ extension\r\n\ @return\ Index\ of\ the\ first\ byte\ after\ this\ extension\r\n
+comment4.params=in\ colors\ i
+comment4.target=int\ readColTbl(byte[],\ int[],\ int)
+comment4.text=\r\n\ @param\ in\r\n\ \ \ \ \ \ \ \ \ \ \ \ Raw\ data\r\n\ @param\ colors\r\n\ \ \ \ \ \ \ \ \ \ \ \ Pre-initialized\ target\ array\ to\ store\ ARGB\ colors\r\n\ @param\ i\r\n\ \ \ \ \ \ \ \ \ \ \ \ Index\ of\ the\ color\ table's\ first\ byte\r\n\ @return\ Index\ of\ the\ first\ byte\ after\ the\ color\ table\r\n
+comment5.params=fr\ in\ i
+comment5.target=int\ readGraphicControlExt(GifDecoder.GifFrame,\ byte[],\ int)
+comment5.text=\r\n\ @param\ ext\r\n\ \ \ \ \ \ \ \ \ \ \ \ Graphic\ control\ extension\ object\r\n\ @param\ in\r\n\ \ \ \ \ \ \ \ \ \ \ \ Raw\ data\r\n\ @param\ i\r\n\ \ \ \ \ \ \ \ \ \ \ \ Index\ of\ the\ extension\ introducer\r\n\ @return\ Index\ of\ the\ first\ byte\ after\ this\ block\r\n
+comment6.params=in\ img
+comment6.target=int\ readHeader(byte[],\ GifDecoder.GifImage)
+comment6.text=\r\n\ @param\ in\r\n\ \ \ \ \ \ \ \ \ \ \ \ Raw\ data\r\n\ @param\ img\r\n\ \ \ \ \ \ \ \ \ \ \ \ The\ GifImage\ object\ that\ is\ currently\ read\r\n\ @return\ Index\ of\ the\ first\ byte\ after\ this\ block\r\n\ @throws\ IOException\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ If\ the\ GIF\ header/trailer\ is\ missing,\ incomplete\ or\ unknown\r\n
+comment7.params=fr\ in\ i
+comment7.target=int\ readImgData(GifDecoder.GifFrame,\ byte[],\ int)
+comment7.text=\r\n\ @param\ fr\r\n\ \ \ \ \ \ \ \ \ \ \ \ The\ GIF\ frame\ to\ whom\ this\ image\ descriptor\ belongs\r\n\ @param\ in\r\n\ \ \ \ \ \ \ \ \ \ \ \ Raw\ data\r\n\ @param\ i\r\n\ \ \ \ \ \ \ \ \ \ \ \ Index\ of\ the\ first\ byte\ of\ this\ block,\ i.e.\ the\ minCodeSize\r\n\ @return\r\n
+comment8.params=in\ i
+comment8.target=int\ readImgDataSize(byte[],\ int)
+comment9.params=fr\ in\ i
+comment9.target=int\ readImgDescr(GifDecoder.GifFrame,\ byte[],\ int)
+comment9.text=\r\n\ @param\ fr\r\n\ \ \ \ \ \ \ \ \ \ \ \ The\ GIF\ frame\ to\ whom\ this\ image\ descriptor\ belongs\r\n\ @param\ in\r\n\ \ \ \ \ \ \ \ \ \ \ \ Raw\ data\r\n\ @param\ i\r\n\ \ \ \ \ \ \ \ \ \ \ \ Index\ of\ the\ image\ separator,\ i.e.\ the\ first\ block\ byte\r\n\ @return\ Index\ of\ the\ first\ byte\ after\ this\ block\r\n
+numComments=12
