@@ -13,9 +13,26 @@ original             |  relief filter
 <p align="center"><sup><sup>source: https://cybercashworldwide.com/royalty-free-gif-images-for-your-website || https://cybercashworldwide.com/wp-content/uploads/2017/05/Gif-Image20.gif
 </sup></sup></p>
 
-## GUI: 
-<p align="LEFT">
-  <img src="https://user-images.githubusercontent.com/84229101/166149424-f4cd1b82-9de7-4ed1-a2c6-e94c58275c3c.PNG" width="55%"/>
+## Supported actions:
+geometric operations       |  1-pixel operations       | convolution matrices
+:-------------------------:|:-------------------------:|:-------------------------:
+vertical mirroring         |greyshades-average         |ridgedetection 1 (3x3)
+horizontal mirroring       |greyshades-max             |ridgedetection 2 (3x3)
+turn 90 degree             |greyshades-min             |hard edges (3x3)
+turn 180 degree            |greyshades-natural         |laplace (3x3)
+-|invert                     |sharpening-filter (3x3)
+-|change RGB                 |boxblur (3x3 // divisor 9)
+-|percents                   |gaussianblur 1 (3x3 // divisor 16)
+-|leave pixels               |gaussianblur 2 (5x5 // divisor 256)
+-|main function              |unsharp masking (5x5 // divisor -256)
+-|-|relief-filter (3x3)
+-|-|median-filter (yxy)
+-|-|pixelation-filter (yxy)
+-|-|main function
+
+## GUI
+<p align="LEFT"> 
+  <img src="https://user-images.githubusercontent.com/84229101/166149424-f4cd1b82-9de7-4ed1-a2c6-e94c58275c3c.PNG" width="58%"/>
 </p>
 
 ## Credits: 
