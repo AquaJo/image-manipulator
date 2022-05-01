@@ -3,9 +3,9 @@ Project was created with blueJ (IDE). Open the project in BlueJ for a better str
 Its an image-manipulator GUI, working with JavaFX and was developed for a school project. You can use different filter-matrices and functions on images and gifs. If you want, you can directly import them through URLs. \
 There is also the ability to include a ftp-server for a public  galery. For that, go into config.java and add your ftp-information. Also turn  boolean ftpServerON to true. \
 Language support: English and German
-## How to run: 
+### How to run: 
 Go to src/ and open package.bluej with bluej (IDE). After opening, compile, right click "BildbearbeitungGUI"-class and left click "Run JavaFx-Application".
-## Example: 
+### Example: 
 original             |  relief filter
 :-------------------------:|:-------------------------:
 ![](https://user-images.githubusercontent.com/84229101/166147318-000da312-31a6-476a-a29c-cf51d37037e7.gif)  |  ![](https://user-images.githubusercontent.com/84229101/166147373-53676ce3-e498-416e-89b0-1bfa7d695d3a.gif)
