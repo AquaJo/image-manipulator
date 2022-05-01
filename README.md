@@ -21,6 +21,6 @@ original             |  relief filter
 ## Credits: 
 - Big thanks to @DhyanB (https://github.com/DhyanB) for the gif-decoder \
 (workaround for error : "java.lang.ArrayIndexOutOfBoundsException: Index 4096 out of bounds for length 4096")
-- Thanks to gluonHq for JavaFx Scenebuilder
+- Thanks to gluonHq for JavaFX 'Scenebuilder'
 - Thanks https://memorynotfound.com/ for the instruction of creating a gif-sequence-writer
 - Thanks to Thomas Schaller for the imp-package
