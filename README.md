@@ -4,7 +4,7 @@ Its an image-manipulator GUI, working with JavaFX and was developed for a school
 There is also the ability to include a ftp-server for a public  galery. For that, go into config.java and add your ftp-information. Also turn  boolean ftpServerON to true. \
 Language support: English and German
 ### How to run: 
-Go to src/ and open package.bluej with bluej (IDE). After opening, compile, right click "BildbearbeitungGUI"-class and left click "Run JavaFx-Application".
+Go to src/ and open package.bluej with bluej (IDE). After opening, compile, right click "BildbearbeitungGUI"-class and left click "Run JavaFX-Application".
 ### Example: 
 original             |  relief filter
 :-------------------------:|:-------------------------:
